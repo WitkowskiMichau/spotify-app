@@ -8,11 +8,11 @@ npm start
 
 * aplikacja wykorzystuje API Spotify
 * albumy są aktywne i prowadzą na listę utworów albumu
-* albumy można dowolnie dowawać dla ulubionych (bookmarks) - które przechowywane są w cookies 
+* albumy można dowolnie dodawać dla ulubionych (bookmarks) - które przechowywane są w cookies 
 * zarządzanie stanem jest wprowadzone na przykładzie poszczególnych albumów - url
 
 
 Uwagi:
-* testy nie były częścią zadanie, stąd ich brak - wrazie potrzeby mogę je dopisać
+* testy nie były częścią zadanie, stąd ich brak - w razie potrzeby mogę je dopisać
 * do cookies dorzucam całe obiekty co jest niezbyt optymalbym rozwiązaniem dla aplikacji - pozostawiłem to jednak w takim stanie z uwagi na to że jest zadanie testowe
 
