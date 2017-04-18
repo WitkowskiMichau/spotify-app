@@ -1,0 +1,53 @@
+<div class="columns">
+  <div class="column is-3">
+    <h2 class="subtitle">Bookmarks</h2>
+    <div class="columns is-multiline">
+      <div class="column is-6" *ngFor="let bookmark of bookmarks">
+        <div>
+          <a routerLink="/spotify/{{bookmark.id}}"><img src="{{bookmark.images[0].url}}" alt=""></a>
+          <ma-bookmark-remove [item]="bookmark"></ma-bookmark-remove>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="columns">
+      <div class="column is-4">
+        <h2 class="subtitle">Find albums</h2>
+        <app-search (searched)="search($event)" [loading]="loading"></app-search>
+      </div>
+      <div class="column is-2">
+        <h2 class="subtitle">Sort Albums</h2>
+            <span class="select">
+              <select class="select" [(ngModel)]="sortValue" (change)="sortChange($event.target.value)">
+                <option selected value="none">none</option>
+                <option value="name">name</option>
+                <option value="type">type</option>
+                <option value="id">id</option>
+                <option value="bookmark">bookmark</option>
+            </select>
+            </span>
+      </div>
+    </div>
+    <div class="columns is-multiline">
+      <div class="column is-4" *ngIf="albums.length === 0">List is empty</div>
+      <div class="column is-4" *ngFor="let album of albumsToShow">
+        <div class="box" style="height: 100%">
+          <div class="card-content">
+            <img src="{{album.images[0].url}}" alt="">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-5">
+                  <a routerLink="/spotify/{{album.id}}">{{album.name}}</a>
+                </p>
+                <p class="subtitle is-6">{{album.artists[0]?.name}}</p>
+              </div>
+            </div>
+            <ma-bookmark-remove [item]="album"></ma-bookmark-remove>
+            <ma-bookmark-add [item]="album"></ma-bookmark-add>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

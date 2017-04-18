@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  menu: MenuItem[] = [
+    {caption: 'Spotify', link: '/spotify'},
+  ];
+}
+
+interface MenuItem {
+  caption: string;
+  link: string;
+  exact?: boolean;
 }

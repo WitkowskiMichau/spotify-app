@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="nav has-shadow">
+  <div class="nav-left">
+    <a class="nav-item is-tab" *ngFor="let item of menu"
+       [routerLink]="item.link"
+       routerLinkActive="is-active"
+       [routerLinkActiveOptions]="{exact:item.exact}">
+      {{ item.caption }}
+    </a>
+  </div>
+</nav>
+<router-outlet></router-outlet>

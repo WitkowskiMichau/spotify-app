@@ -1,0 +1,20 @@
+<div class="columns">
+    <div class="column is-6">
+        <img src="{{album.images[0].url}}" alt="">
+    </div>
+    <div class="column is-6">
+        <h2><a routerLink="/spotify/">  Back to list</a></h2>
+        <div class="card-content">
+            <table class="table is-bordered">
+                <thead>
+                <tr>
+                    <th>name</th>
+                </tr>
+                </thead>
+                <tr *ngFor="let track of album?.tracks.items">
+                    <td>{{track.name}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
