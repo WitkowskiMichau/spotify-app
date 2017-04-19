@@ -15,4 +15,7 @@ npm start
 Uwagi:
 * testy nie były częścią zadanie, stąd ich brak - w razie potrzeby mogę je dopisać
 * do cookies dorzucam całe obiekty co jest niezbyt optymalbym rozwiązaniem dla aplikacji - pozostawiłem to jednak w takim stanie z uwagi na to że jest zadanie testowe
+* poprawić kopiowaną listę albumów na pipe
+* poprawić nazwy klas
+
 
